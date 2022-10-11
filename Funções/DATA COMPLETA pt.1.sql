@@ -1,3 +1,8 @@
+--Criar uma função SF_DataCompleta para imprimir datas no seguinte formato: 12 de Maio 
+--de 2002. A função deve receber como parâmetro uma data e apresentar como retorno uma 
+--cadeia de caracteres. Observação: A indicação do idioma pode ser realizada antes da 
+--chamada da função.
+
 CREATE OR ALTER FUNCTION SF_DATACOMPLETA(@DATA DATE)
 RETURNS VARCHAR(40) AS
 BEGIN
