@@ -1,3 +1,7 @@
+--Criar  uma  função  SF_TO_CHAR  para  transformar  uma  data  em  uma  cadeia 
+--de  caracteres. 
+--A função  deve  receber  como parâmetros  uma data  e uma máscara.
+
 CREATE OR ALTER FUNCTION SF_TO_CHAR(@DATA DATETIME, @MASK VARCHAR(20))
 RETURNS VARCHAR(20)
 BEGIN
