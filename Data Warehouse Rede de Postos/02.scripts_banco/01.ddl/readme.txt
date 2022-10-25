@@ -1,4 +1,0 @@
--- Scripts para criação do banco de dados e esquemas
--- Esquema Operacional
--- Esquema da Área de Staging
--- Esquema Dimensional
