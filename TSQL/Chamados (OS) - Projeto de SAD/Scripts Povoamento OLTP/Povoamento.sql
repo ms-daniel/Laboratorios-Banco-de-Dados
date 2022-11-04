@@ -1,55 +1,55 @@
 USE PROJETO_SAD
 
---INSER«√O NAS TABELAS SEM FOREIGN KEY
+--INSER√á√ÉO NAS TABELAS SEM FOREIGN KEY
 INSERT INTO TB_STATUS (ID_STATUS, STATUS) VALUES 
 (1, 'Em Aberto'),
 (2, 'Resolvido')
 
 INSERT INTO TB_CATEGORIA (ID_CATEGORIA, CATEGORIA) VALUES
-(1, 'ManutenÁ„o de Equipamento'),
-(2, 'InstalaÁ„o de Equipamento'),
+(1, 'Manuten√ß√£o de Equipamento'),
+(2, 'Instala√ß√£o de Equipamento'),
 (3, 'Problemas com Equipamento'),
 (4, 'Problemas com Software'),
-(5, 'InstalaÁ„o de Software'),
+(5, 'Instala√ß√£o de Software'),
 (6, 'Problemas na Rede')
 
 INSERT INTO TB_ENDERECO (ID_ENDERECO, UF, CIDADE, CEP, BAIRRO, RUA, NUMERO) VALUES
-(1, 'SE', 'S„o Cirstov„o', '49100-000', 'Rosa Elze', 'Av. Marechal Rondon', null),
-(2, 'SE', 'Itabaiana', '49506-036', 'SÌtio Porto', 'Av. Vereador OlÌmpio Grande', null),
-(3, 'SE', 'Lagarto', '49400-000', 'Centro', 'Av. Governador Marcelo DÈda', 13)
+(1, 'SE', 'S√£o Cirstov√£o', '49100-000', 'Rosa Elze', 'Av. Marechal Rondon', null),
+(2, 'SE', 'Itabaiana', '49506-036', 'S√≠tio Porto', 'Av. Vereador Ol√≠mpio Grande', null),
+(3, 'SE', 'Lagarto', '49400-000', 'Centro', 'Av. Governador Marcelo D√©da', 13)
 
 --=======================================================================================================================================================================--
 
---INSER«√O NAS TABLEAS COM FOREIGN KEY
+--INSER√á√ÉO NAS TABLEAS COM FOREIGN KEY
 INSERT INTO TB_FUNCIONARIO (ID_FUNCIONARIO, MATRICULA, NOME, TELEFONE, EMAIL, DATA_INICIO_CONTRATO, DATA_FIM_CONTRATO, ID_DEPARTAMENTO, ID_ORGAO_RESPONSAVEL) VALUES
 (1, '200600000001', 'Jovinianour Valter de Santana Son', '11111111111111', 'diretor.sc@uf.br',  '01/01/2006', null, null, null),
 (2, '200600000002', 'Hugo Vitu Sarmen Vilturinior',      '22222222222222', 'diretor.ita@uf.br', '01/01/2006', null, null, null)
 
 INSERT INTO TB_CAMPUS (ID_CAMPUS, CNPJ, NOME, TELEFONE, ID_ENDERECO, ID_DIRETOR) VALUES
-(1, '67.787.686/0001-83', 'Cidade Univ. Prof. JosÈ AloÌsio de Campos', '+55 79 3996-6699', 1, 1),
+(1, '67.787.686/0001-83', 'Cidade Univ. Prof. Jos√© Alo√≠sio de Campos', '+55 79 3996-6699', 1, 1),
 (2, '07.660.586/0001-60', 'Campus Prof. Alberto Carvalho', '+55 79 3822-8288', 2, 2)
 
-												------------------------------------------------------------------
+					------------------------------------------------------------------
 
 INSERT INTO TB_DEPARTAMENTO (ID_DEPARTAMENTO, COD_DEPARTAMENTO, NOME, SIGLA, DESCRICAO, ID_DIRETOR, ID_CAMPUS) VALUES
 --CAMPUS ALBERTO
-(1, 1, 'DEPARTAMENTO DE EDUCA«√O', 'DEDI', ' ', null, 2),
-(2, 2, 'DDEPARTAMENTO DE SISTEMA DE INFORMA«√O', 'DSI', ' ', null, 2),
+(1, 1, 'DEPARTAMENTO DE EDUCA√á√ÉO', 'DEDI', ' ', null, 2),
+(2, 2, 'DDEPARTAMENTO DE SISTEMA DE INFORMA√á√ÉO', 'DSI', ' ', null, 2),
 --CAMPUS JOSE
-(3, 1, 'DEPARTAMENTO DE COMPUTA«√O', 'DECOMP', ' ', null, 1),
-(4, 2, 'DEPARTAMENTO DE FÕSICA', 'DFI', ' ', null, 1 )
+(3, 1, 'DEPARTAMENTO DE COMPUTA√á√ÉO', 'DECOMP', ' ', null, 1),
+(4, 2, 'DEPARTAMENTO DE F√çSICA', 'DFI', ' ', null, 1 )
 
 INSERT INTO TB_ORGAO_RESPONSAVEL (ID_ORGAO_RESPONSAVEL, COD_ORGAO_RESPONSAVEL, NOME, SIGLA, ID_COORDENADOR, ID_CAMPUS) VALUES
 (2, 1, 'Centro de Processamento de Dados', 'CPD', null, 2),
-(1, 1, 'SuperintendÍncia de Tecnologia da InformaÁ„o', 'STI', null, 1)
+(1, 1, 'Superintend√™ncia de Tecnologia da Informa√ß√£o', 'STI', null, 1)
 
 INSERT INTO TB_FUNCIONARIO (ID_FUNCIONARIO, MATRICULA, NOME, TELEFONE, EMAIL, DATA_INICIO_CONTRATO, DATA_FIM_CONTRATO, ID_DEPARTAMENTO, ID_ORGAO_RESPONSAVEL) VALUES
 (3, '200600000003', 'Elsa de Arendelle', '333333333333', 'diretor.dedi@uf.br', '01/01/2006', null, 1, null),
 (4, '200600000004', 'Bruce Wayne', '444444444444', 'diretor.dsi@uf.br',  '01/01/2006', null, 2, null),
 (5, '200600000005', 'Clark Kent Kal-El', '555555555555', 'diretor.decomp@uf.br', '01/01/2006', null, 3, null),
 (6, '200600000006', 'Diana Prince', '666666666666', 'diretor.dfi@uf.br', '01/01/2006', null, 4, null),
-(7, '200600000007', 'Marcus T˙lio de Ara˙jo Machado', '777777777777', 'coordenador.cpd@uf.br', '01/01/2006', null, null, 2),
-(8, '200600000008', 'AndrÈs Ign·cio Martinez MenÈndez', '888888888888', '', '01/01/2006', null, null, 1)
+(7, '200600000007', 'Marcus T√∫lio de Ara√∫jo Machado', '777777777777', 'coordenador.cpd@uf.br', '01/01/2006', null, null, 2),
+(8, '200600000008', 'Andr√©s Ign√°cio Martinez Men√©ndez', '888888888888', '', '01/01/2006', null, null, 1)
 
 --UPDATE DEPARTAMENTO
 UPDATE TB_DEPARTAMENTO
@@ -107,7 +107,7 @@ ON (D.ID_COORDENADOR = F.ID_FUNCIONARIO)
 JOIN TB_FUNCIONARIO F2
 ON(C.ID_DIRETOR = F2.ID_FUNCIONARIO)
 
---CAMPUS E ENDERE«OS
+--CAMPUS E ENDERE√áOS
 SELECT C.NOME AS 'CAMPUS', E.CIDADE, E.RUA, ISNULL(E.NUMERO, 0) AS 'NUMERO', C.TELEFONE
 FROM TB_CAMPUS C JOIN
 TB_ENDERECO E
